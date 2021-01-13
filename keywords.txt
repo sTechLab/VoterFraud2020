@@ -1,0 +1,40 @@
+Keyword                         Date added
+
+#ballotfraud                    10/24/2020
+#ballotharvesting               10/24/2020
+#ballotvoterfraud               10/24/2020
+#cheatingdemocrats              10/24/2020
+#democratvoterfraud             10/24/2020
+#gopvoterfraud                  10/24/2020
+#ilhanomarballotharvesting      10/24/2020
+#ilhanomarvoterfraud            10/24/2020
+#mailinvoterfraud               10/24/2020
+#nomailinvoting                 10/24/2020
+#stopgopvoterfraud              10/24/2020
+#stopvoterfraud                 10/24/2020
+#votebymailfraud                10/24/2020
+#voterfraud                     10/24/2020
+#voterfraudisreal               10/24/2020
+
+#discardedballots               10/31/2020
+#electionfraud                  10/31/2020
+#electioninterference           10/31/2020
+#electiontampering              10/31/2020
+#hackedvotingmachines           10/31/2020
+Destroyed ballots               10/31/2020
+Discarded ballots               10/31/2020
+Election fraud                  10/31/2020
+Election interference           10/31/2020
+Election tampering              10/31/2020
+Hacked voting machine           10/31/2020
+Pre-filled ballot               10/31/2020
+Stolen ballots                  10/31/2020
+ballot fraud                    10/31/2020
+ballot harvesting               10/31/2020
+cheating democrats              10/31/2020
+democrats cheat                 10/31/2020
+harvest ballot                  10/31/2020
+vote by mail fraud              10/31/2020
+voter fraud                     10/31/2020
+
+#stopthesteal                   11/03/2020

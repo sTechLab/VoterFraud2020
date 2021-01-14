@@ -1,11 +1,17 @@
 # VoterFraud2020 Dataset
 
+# Hydrating the data
+_To-do_
+
 # Data description
 
 ## Tweets
-- [tweets-10-2020.csv](data/tweets-10-2020.csv)
-- [tweets-11-2020.csv](data/tweets-11-2020.csv)
-- [tweets-12-2020.csv](data/tweets-12-2020.csv)
+
+- [October 2020](data/tweets/2020-10)
+- [November 2020](data/tweets/2020-11)
+- [December 2020](data/tweets/2020-12)
+
+The tweets are split into daily chunks.
 
 | Data Column                       | Description |
 | -------------                     | ------------- |
@@ -28,9 +34,12 @@
 | quote_count_suspended_users       |   |
 
 ## Retweets
-- [retweets-10-2020.csv](data/retweets-10-2020.csv)
-- [retweets-11-2020.csv](data/retweets-11-2020.csv)
-- [retweets-12-2020.csv](data/retweets-12-2020.csv)
+
+- [October 2020](data/retweets/2020-10)
+- [November 2020](data/retweets/2020-11)
+- [December 2020](data/retweets/2020-12)
+
+The retweets are split into daily chunks.
 
 | Data Column                       | Description |
 | -------------                     | ------------- |
@@ -38,7 +47,10 @@
 | user_id                           |   |
 
 ## Users
-- [users.csv](data/users.csv)
+
+- [users.csv](data/users/)
+
+The users are split into 5 chunks, sorted by user id (ascending).
 
 | Data Column                       | Description |
 | -------------                     | ------------- |

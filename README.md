@@ -1,5 +1,26 @@
-# VoterFraud2020 Dataset
-VoterFraud2020 is a multi-modal Twitter dataset with 7.6M tweets and 25.6M retweets that are related to voter fraud claims.
+# VoterFraud2020
+VoterFraud2020 is a multi-modal Twitter dataset with 7.6M tweets and 25.6M retweets related to voter fraud claims.
+
+- [voterfraud2020.io](http://voterfraud2020.io), interactive web application for exploring the dataset
+- [Figshare dataset publication](https://figshare.com/s/2e3a1050414c92a7d385), indexed dataset with DOI **10.6084/m9.figshare.13571084**
+  
+*coming soon*
+- Dataset Paper (PDF) 
+- [github/sTechLab/twitter-stream](https://github.com/sTechLab/twitter-stream), the twitter streaming code
+- [github/sTechLab/VoterFraud2020-analysis](https://github.com/sTechLab/voter-fraud-analysis), the code behind the data analysis
+
+
+### Table of contents
+- [VoterFraud2020](#voterfraud2020)
+    - [Table of contents](#table-of-contents)
+- [Hydrating the data](#hydrating-the-data)
+- [Data description](#data-description)
+  - [Tweets](#tweets)
+  - [Retweets](#retweets)
+  - [Users](#users)
+  - [Images](#images)
+  - [URLs](#urls)
+  - [Youtube Videos](#youtube-videos)
 
 # Hydrating the data
 _To-do_
@@ -112,7 +133,7 @@ The users are split into 5 chunks, sorted by user id (ascending).
 | retweet_count_suspended_users     |   |
 | quote_count_suspended_users       |   |
 
-### Youtube Videos
+## Youtube Videos
 - [youtube_videos.csv](data/images.csv)
 
 | Data Column                       | Description |

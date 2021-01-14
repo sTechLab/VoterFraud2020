@@ -1,4 +1,5 @@
 # VoterFraud2020 Dataset
+VoterFraud2020 is a multi-modal Twitter dataset with 7.6M tweets and 25.6M retweets that are related to voter fraud claims.
 
 # Hydrating the data
 _To-do_

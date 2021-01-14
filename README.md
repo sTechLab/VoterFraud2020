@@ -2,7 +2,7 @@
 VoterFraud2020 is a multi-modal Twitter dataset with 7.6M tweets and 25.6M retweets related to voter fraud claims.
 
 - [voterfraud2020.io](http://voterfraud2020.io), interactive web application for exploring the dataset
-- [Figshare dataset publication](https://figshare.com/s/2e3a1050414c92a7d385), indexed dataset with DOI **10.6084/m9.figshare.13571084**
+- [Figshare dataset publication](https://doi.org/10.6084/m9.figshare.13571084) with digital object identifier (DOI) **10.6084/m9.figshare.13571084**
   
 *coming soon*
 - Dataset Paper (PDF) 

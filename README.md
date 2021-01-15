@@ -50,7 +50,7 @@ The tweets are split into daily chunks.
 | retweet_count_by_community_X      | The number of retweets the tweet received from users in community X (X=0-4). |
 | quote_count_by_community_X        | The number of quotes the tweet received from users in community X (X=0-4).  |
 | retweet_count_by_suspended_users  | The number of retweets the tweet received from suspended users.  |
-| quote_count_by_suspended_users    | The number of quotes the tweet received from users in community X.  |
+| quote_count_by_suspended_users    | The number of quotes the tweet received from suspended users.  |
 
 ## Retweets (25.6M)
 
@@ -82,76 +82,55 @@ The users are split into 5 chunks, sorted by user id (ascending).
 | user_active_status                        | The active status of the user (as of January 10th). Values: 'active', 'suspended', 'not-found' |
 | closeness_centrality_detractor_cluster    | Normalized closeness centrality of the top 10,000 users in the detractor cluster (computed using [Networkit](https://networkit.github.io/dev-docs/python_api/centrality.html#networkit.centrality.TopCloseness)).  |
 | closeness_centrality_promoter_cluster     | Normalized closeness centrality of the top 10,000 users in the promoter cluster (computed using [Networkit](https://networkit.github.io/dev-docs/python_api/centrality.html#networkit.centrality.TopCloseness)). |
-| retweet_count_by_community_X              | The number of retweets the user received from other users in community X (X=0-4). |
-| quote_count_by_community_X                | The number of quotes the user received from other users in community X (X=0-4).  |
-| retweet_count_by_suspended_users          | The number of retweets the user received from suspended users.  |
-| quote_count_by_suspended_users            | The number of quotes the user received from other users in community X.  |
+| retweet_count_by_community_X              | Aggregated count of the retweets the user received from other users in community X (X=0-4). |
+| quote_count_by_community_X                | Aggregated count of the quotes the user received from other users in community X (X=0-4).  |
+| retweet_count_by_suspended_users          | Aggregated count of the retweets the user received from suspended users.  |
+| quote_count_by_suspended_users            | Aggregated count of the quotes the user received from suspended users.  |
 
 ## Images
 - [images.csv](data/images.csv)
 
 | Data Column                       | Description |
 | -------------                     | ------------- |
-| unique_id                         |   |
-| tweet_id                          |   |
-| a_hash                            |   |
-| p_hash                            |   |
-| w_hash                            |   |
+| unique_id                         | Unique identifier of the image. |
+| tweet_id                          | Tweet ID of the tweet that contained the image.  |
+| a_hash                            | The Average hash of the image. |
+| p_hash                            | The Perceptual hash of the image.  |
+| w_hash                            | The [Wavelet hash](https://fullstackml.com/wavelet-image-hash-in-python-3504fdd282b5) of the image.  |
 
 ## URLs
 - [urls.csv](data/urls.csv)
 
 | Data Column                       | Description |
 | -------------                     | ------------- |
-| url                               |   |
-| domain                            |   |
-| tweet_count                       |   |
-| retweet_count_metadata            |   |
-| quote_count_metadata              |   |
-| tweet_count_cluster_0             |   |
-| retweet_count_cluster_0           |   |
-| quote_count_cluster_0             |   |
-| tweet_count_cluster_1             |   |
-| retweet_count_cluster_1           |   |
-| quote_count_cluster_1             |   |
-| tweet_count_cluster_2             |   |
-| retweet_count_cluster_2           |   |
-| quote_count_cluster_2             |   |
-| tweet_count_cluster_3             |   |
-| retweet_count_cluster_3           |   |
-| quote_count_cluster_3             |   |
-| tweet_count_cluster_4             |   |
-| retweet_count_cluster_4           |   |
-| quote_count_cluster_4             |   |
-| retweet_count_suspended_users     |   |
-| quote_count_suspended_users       |   |
+| url                               | The URL. |
+| domain                            | The domain of the URL. |
+| tweet_count                       | Aggregated count of the tweets that contained the URL.  |
+| retweet_count_metadata            | Aggregated count of the retweets that tweets containing the URL received according to the tweet object's metadata (as of December 16th). |
+| quote_count_metadata              | Aggregated count of the quotes that tweets containing the URL received according to the tweet object's metadata (as of December 16th).  |
+| tweet_count_by_community_X        | Aggregated count of tweets that contained the URL by users in community X (X=0-4). |
+| retweet_count_by_community_X      | Aggregated count of the retweets that tweets containing the URL received from users in community X (X=0-4). |
+| quote_count_by_community_X        | Aggregated count of the quotes that tweets containing the URL received from users in community X (X=0-4).  |
+| tweet_count_by_community_X        | Aggregated count of tweets that contained the URL by suspended users. |
+| retweet_count_by_suspended_users  | Aggregated count of the retweets that tweets containing the URL received from suspended users.  |
+| quote_count_by_suspended_users    | Aggregated count of the quotes that tweets containing the URL received from suspended users.  |
 
 ## Youtube Videos
 - [youtube_videos.csv](data/images.csv)
 
 | Data Column                       | Description |
 | -------------                     | ------------- |
-| video_id                          |   |
-| video_title                       |   |
-| channel_id                        |   |
-| channel_title                     |   |
-| published_t                       |   |
-| retweet_count_metadata            |   |
-| quote_count_metadata              |   |
-| tweet_count_cluster_0             |   |
-| retweet_count_cluster_0           |   |
-| quote_count_cluster_0             |   |
-| tweet_count_cluster_1             |   |
-| retweet_count_cluster_1           |   |
-| quote_count_cluster_1             |   |
-| tweet_count_cluster_2             |   |
-| retweet_count_cluster_2           |   |
-| quote_count_cluster_2             |   |
-| tweet_count_cluster_3             |   |
-| retweet_count_cluster_3           |   |
-| quote_count_cluster_3             |   |
-| tweet_count_cluster_4             |   |
-| retweet_count_cluster_4           |   |
-| quote_count_cluster_4             |   |
-| retweet_count_suspended_users     |   |
-| quote_count_suspended_users       |   |
+| video_id                          | ID of the Youtube video.  |
+| video_title                       | Title of the video (as of January 1st). |
+| channel_id                        | Channel ID of the channel where the video was posted.  |
+| channel_title                     | Channel title of the channel where the video was posted (as of January 1st).  |
+| published_at                      | Timestamp of when the video was published. |
+| tweet_count                       | Aggregated count of the tweets that contained the video.  |
+| retweet_count_metadata            | Aggregated count of the retweets that tweets containing the video received according to the tweet object's metadata (as of December 16th). |
+| quote_count_metadata              | Aggregated count of the quotes that tweets containing the video received according to the tweet object's metadata (as of December 16th).  |
+| tweet_count_by_community_X        | Aggregated count of tweets that contained the video by users in community X (X=0-4). |
+| retweet_count_by_community_X      | Aggregated count of the retweets that tweets containing the video received from users in community X (X=0-4). |
+| quote_count_by_community_X        | Aggregated count of the quotes that tweets containing the video received from users in community X (X=0-4).  |
+| tweet_count_by_community_X        | Aggregated count of tweets that contained the video by suspended users. |
+| retweet_count_by_suspended_users  | Aggregated count of the retweets that tweets containing the video received from suspended users.  |
+| quote_count_by_suspended_users    | Aggregated count of the quotes that tweets containing the video received from suspended users.  |

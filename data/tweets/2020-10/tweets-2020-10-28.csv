@@ -1,4 +1,4 @@
-tweet_id,user_cluster,user_active_status,retweet_count_metadata,quote_count_metadata,retweet_count_cluster_0,quote_count_cluster_0,retweet_count_cluster_1,quote_count_cluster_1,retweet_count_cluster_2,quote_count_cluster_2,retweet_count_cluster_3,quote_count_cluster_3,retweet_count_cluster_4,quote_count_cluster_4,retweet_count_suspended_users,quote_count_suspended_users
+tweet_id,user_community,user_active_status,retweet_count_metadata,quote_count_metadata,retweet_count_by_community_0,quote_count_by_community_0,retweet_count_by_community_1,quote_count_by_community_1,retweet_count_by_community_2,quote_count_by_community_2,retweet_count_by_community_3,quote_count_by_community_3,retweet_count_by_community_4,quote_count_by_community_4,retweet_count_by_suspended_users,quote_count_by_suspended_users
 1321240260206981120,1,inactive,0,0,0,0,0,0,0,0,0,0,0,0,0,0
 1321240263277371392,2,active,0,0,0,0,0,0,0,0,0,0,0,0,0,0
 1321240265898819585,2,suspended,0,0,0,0,0,0,0,0,0,0,0,0,0,0

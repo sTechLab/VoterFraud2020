@@ -15,9 +15,9 @@ VoterFraud2020 is a multi-modal Twitter dataset with 7.6M tweets and 25.6M retwe
     - [Table of contents](#table-of-contents)
 - [Hydrating the data](#hydrating-the-data)
 - [Data description](#data-description)
-  - [Tweets](#tweets)
-  - [Retweets](#retweets)
-  - [Users](#users)
+  - [Tweets (7.6M)](#tweets-76m)
+  - [Retweets (25.6M)](#retweets-256m)
+  - [Users (2.6M)](#users-26m)
   - [Images](#images)
   - [URLs](#urls)
   - [Youtube Videos](#youtube-videos)
@@ -26,8 +26,13 @@ VoterFraud2020 is a multi-modal Twitter dataset with 7.6M tweets and 25.6M retwe
 _To-do_
 
 # Data description
+The columns in the data are described below. See the paper (to-do: link to PDF)
+ for more details, or explore the [project website](http://voterfraud2020.io) for additional descriptive statistics.
+## Tweets (7.6M)
 
-## Tweets
+Total count: 7,603,103  
+Original tweets: 3,781,524  
+Quote tweets: 3,821,579
 
 - [October 2020](data/tweets/2020-10)
 - [November 2020](data/tweets/2020-11)
@@ -55,7 +60,9 @@ The tweets are split into daily chunks.
 | retweet_count_suspended_users     |   |
 | quote_count_suspended_users       |   |
 
-## Retweets
+## Retweets (25.6M)
+
+Total count: 25,566,698
 
 - [October 2020](data/retweets/2020-10)
 - [November 2020](data/retweets/2020-11)
@@ -65,34 +72,28 @@ The retweets are split into daily chunks.
 
 | Data Column                       | Description |
 | -------------                     | ------------- |
-| retweeted_id                      |   |
-| user_id                           |   |
+| retweeted_id                      | The id of the retweeted tweet.|
+| user_id                           | The id of the user that retweeted. |
 
-## Users
+## Users (2.6M)
+
+Total count: 2,559,018
 
 - [users.csv](data/users/)
 
 The users are split into 5 chunks, sorted by user id (ascending).
 
-| Data Column                       | Description |
-| -------------                     | ------------- |
-| user_id                           |   |
-| cluster                           |   |
-| active_status                     |   |
-| closeness_centrality_clusters_0   | Closeness centrality ...  |
-| closeness_centrality_clusters_1234| Closeness centrality ...  |
-| retweet_count_cluster_0           |   |
-| quote_count_cluster_0             |   |
-| retweet_count_cluster_1           |   |
-| quote_count_cluster_1             |   |
-| retweet_count_cluster_2           |   |
-| quote_count_cluster_2             |   |
-| retweet_count_cluster_3           |   |
-| quote_count_cluster_3             |   |
-| retweet_count_cluster_4           |   |
-| quote_count_cluster_4             |   |
-| retweet_count_suspended_users     |   |
-| quote_count_suspended_users       |   |
+| Data Column                               | Description |
+| -------------                             | ------------- |
+| user_id                                   | The id of the user. |
+| user_community                            | The community of the user in the retweet graph, which is found using the [Infomap community detection algorithm](https://mapequation.github.io/infomap/python/) with default parameters. Values: 0, 1, 2, 3, 4, null |
+| user_active_status                        | The active status of the user (as of January 10th). Values: 'active', 'suspended', 'not-found' |
+| closeness_centrality_detractor_cluster    | Normalized closeness centrality of the top 10,000 users in the detractor cluster (computed using [Networkit](https://networkit.github.io/dev-docs/python_api/centrality.html#networkit.centrality.TopCloseness)).  |
+| closeness_centrality_promoter_cluster     | Normalized closeness centrality of the top 10,000 users in the promoter cluster (computed using [Networkit](https://networkit.github.io/dev-docs/python_api/centrality.html#networkit.centrality.TopCloseness)). |
+| retweet_count_by_community_X              | The number of retweets the user received from other users in community X (X=0-4). |
+| quote_count_by_community_X                | The number of quotes the user received from other users in community X (X=0-4).  |
+| retweet_count_by_suspended_users          | The number of retweets the user received from suspended users.  |
+| quote_count_by_suspended_users            | The number of quotes the user received from other users in community X.  |
 
 ## Images
 - [images.csv](data/images.csv)

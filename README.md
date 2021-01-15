@@ -6,8 +6,10 @@ VoterFraud2020 is a multi-modal Twitter dataset with 7.6M tweets and 25.6M retwe
   
 *coming soon*
 - Dataset Paper (PDF) 
-- [github/sTechLab/twitter-stream](https://github.com/sTechLab/twitter-stream), the twitter streaming code
-- [github/sTechLab/VoterFraud2020-analysis](https://github.com/sTechLab/voter-fraud-analysis), the code behind the data analysis
+- github/sTechLab/twitter-stream, the twitter streaming code
+- github/sTechLab/VoterFraud2020-analysis, the code behind the data analysis
+<!-- - [github/sTechLab/twitter-stream](https://github.com/sTechLab/twitter-stream), the twitter streaming code -->
+<!-- - [github/sTechLab/VoterFraud2020-analysis](https://github.com/sTechLab/voter-fraud-analysis), the code behind the data analysis -->
 
 
 ### Table of contents
@@ -23,7 +25,9 @@ VoterFraud2020 is a multi-modal Twitter dataset with 7.6M tweets and 25.6M retwe
   - [Youtube Videos](#youtube-videos)
 
 # Hydrating the data
-_To-do_
+The tweets and user objects in the dataset can be hydrated using [Twarc](https://github.com/DocNow/twarc) or [Hydrator](https://github.com/DocNow/hydrator)
+
+*Detailed instructions and script coming soon*
 
 # Data description
 The columns in the data are described below. See the paper (to-do: link to PDF)

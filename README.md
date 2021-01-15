@@ -120,7 +120,7 @@ The users are split into 5 chunks, sorted by user id (ascending).
 | quote_count_by_suspended_users    | Aggregated count of the quotes that tweets containing the URL received from suspended users.  |
 
 ## Youtube Videos
-- [youtube_videos.csv](data/images.csv)
+- [youtube_videos.csv](data/youtube_videos.csv)
 
 | Data Column                       | Description |
 | -------------                     | ------------- |

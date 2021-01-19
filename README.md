@@ -29,6 +29,8 @@ The tweets and user objects in the dataset can be hydrated using [Twarc](https:/
 
 *Detailed instructions and script coming soon*
 
+Note: tweets from suspended users will not be available for hydration. We believe it's in the [public interest](https://www.propublica.org/article/why-we-published-parler-users-videos-capitol-attack) to make these tweets available. We will share those tweets with published academic researchers; email us for details. 
+
 # Data description
 The columns in the data are described below. See the paper (to-do: link to PDF)
  for more details, or explore the [project website](http://voterfraud2020.io) for additional descriptive statistics.

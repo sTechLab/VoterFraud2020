@@ -3,19 +3,19 @@ VoterFraud2020 is a multi-modal Twitter dataset with 7.6M tweets and 25.6M retwe
 
 - [voterfraud2020.io](http://voterfraud2020.io), interactive web application for exploring the dataset
 - [Figshare dataset publication](https://doi.org/10.6084/m9.figshare.13571084) with digital object identifier (DOI) **10.6084/m9.figshare.13571084**
+- [github/sTechLab/VoterFraud2020-analysis](https://github.com/sTechLab/VoterFraud2020-analysis), the code behind the data analysis
   
 *coming soon*
 - Dataset Paper (PDF) 
 - github/sTechLab/twitter-stream, the twitter streaming code
-- github/sTechLab/VoterFraud2020-analysis, the code behind the data analysis
 <!-- - [github/sTechLab/twitter-stream](https://github.com/sTechLab/twitter-stream), the twitter streaming code -->
-<!-- - [github/sTechLab/VoterFraud2020-analysis](https://github.com/sTechLab/voter-fraud-analysis), the code behind the data analysis -->
-
 
 ### Table of contents
 - [VoterFraud2020](#voterfraud2020)
     - [Table of contents](#table-of-contents)
 - [Hydrating the data](#hydrating-the-data)
+    - [Hydrating using Hydrator (GUI)](#hydrating-using-hydrator-gui)
+    - [Hydrating using Twarc (CLI, python 3)](#hydrating-using-twarc-cli-python-3)
 - [Data description](#data-description)
   - [Tweets (7.6M)](#tweets-76m)
   - [Retweets (25.6M)](#retweets-256m)
@@ -25,11 +25,31 @@ VoterFraud2020 is a multi-modal Twitter dataset with 7.6M tweets and 25.6M retwe
   - [Youtube Videos](#youtube-videos)
 
 # Hydrating the data
-The tweets and user objects in the dataset can be hydrated using [Twarc](https://github.com/DocNow/twarc) or [Hydrator](https://github.com/DocNow/hydrator)
+The tweets and user objects in the dataset can be hydrated using [Twarc](https://github.com/DocNow/twarc) or [Hydrator](https://github.com/DocNow/hydrator).
 
-*Detailed instructions and script coming soon*
+**Note:** tweets from suspended users will not be available for hydration. We believe it's in the [public interest](https://www.propublica.org/article/why-we-published-parler-users-videos-capitol-attack) to make these tweets available. We will share those tweets with published academic researchers; email us for details. 
 
-Note: tweets from suspended users will not be available for hydration. We believe it's in the [public interest](https://www.propublica.org/article/why-we-published-parler-users-videos-capitol-attack) to make these tweets available. We will share those tweets with published academic researchers; email us for details. 
+### Hydrating using [Hydrator](https://github.com/DocNow/hydrator) (GUI)
+Navigate to the [Hydrator github repository](https://github.com/DocNow/hydrator) and follow the instructions for installation in their README.
+To use the GUI, tweet IDs must first be extracted to a tweet id file from the CSVs in this repository.
+
+### Hydrating using [Twarc](https://github.com/DocNow/twarc) (CLI, python 3)
+First install Twarc and tqdm
+```
+pip3 install twarc tqdm
+```
+
+Configure Twarc with your Twitter API tokens (note you must [apply](https://developer.twitter.com/en/apply-for-access) for a Twitter developer account first in order to obtain the needed tokens). You can also configure the API tokens in the script, if unable to configure through CLI. 
+```
+twarc configure
+```
+
+Run the script. The hydrated Tweets will be stored in the same folder as the Tweet-ID file, and is saved as a compressed jsonl file
+```
+python3 hydrate.py
+```
+
+*This guide was inspired by the [#Election2020 Dataset Repository](https://github.com/echen102/us-pres-elections-2020#how-to-hydrate)*.
 
 # Data description
 The columns in the data are described below. See the paper (to-do: link to PDF)

@@ -119,12 +119,14 @@ The users are split into 5 chunks, sorted by user id (ascending).
 ## Images
 - [images.csv](data/images.csv)
 
+The image hashes were calculated using the [ImageHash python package](https://github.com/JohannesBuchner/imagehash).
+
 | Data Column                       | Description |
 | -------------                     | ------------- |
 | unique_id                         | Unique identifier of the image. |
 | tweet_id                          | Tweet ID of the tweet that contained the image.  |
-| a_hash                            | The Average hash of the image. |
-| p_hash                            | The Perceptual hash of the image.  |
+| a_hash                            | The [Average hash](https://www.hackerfactor.com/blog/index.php?/archives/432-Looks-Like-It.html) of the image. |
+| p_hash                            | The [Perceptual hash](https://www.hackerfactor.com/blog/index.php?/archives/432-Looks-Like-It.html) of the image.  |
 | w_hash                            | The [Wavelet hash](https://fullstackml.com/wavelet-image-hash-in-python-3504fdd282b5) of the image.  |
 
 ## URLs

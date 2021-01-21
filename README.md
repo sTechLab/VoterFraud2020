@@ -117,6 +117,8 @@ The users are split into 5 chunks, sorted by user id (ascending).
 | quote_count_by_suspended_users            | Aggregated count of the quotes the user received from suspended users.  |
 
 ## Images
+Total count: 167,696
+
 - [images.csv](data/images.csv)
 
 The image perceptual hash values were calculated using the [ImageHash python package](https://github.com/JohannesBuchner/imagehash).

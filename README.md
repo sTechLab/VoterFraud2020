@@ -1,12 +1,12 @@
 # VoterFraud2020
-VoterFraud2020 is a multi-modal Twitter dataset with 7.6M tweets and 25.6M retweets related to voter fraud claims.
+VoterFraud2020 is a multi-modal Twitter dataset with 7.6M tweets and 25.6M retweets from 2.6M users related to voter fraud claims.
 
+- [The Associated Paper on arXiv](https://arxiv.org/abs/2101.08210)
 - [voterfraud2020.io](http://voterfraud2020.io), interactive web application for exploring the dataset
 - [Figshare dataset publication](https://doi.org/10.6084/m9.figshare.13571084) with digital object identifier (DOI) **10.6084/m9.figshare.13571084**
 - [github/sTechLab/VoterFraud2020-analysis](https://github.com/sTechLab/VoterFraud2020-analysis), the code behind the data analysis
   
 *coming soon*
-- Dataset Paper (PDF) 
 - github/sTechLab/twitter-stream, the twitter streaming code
 <!-- - [github/sTechLab/twitter-stream](https://github.com/sTechLab/twitter-stream), the twitter streaming code -->
 
@@ -23,6 +23,9 @@ VoterFraud2020 is a multi-modal Twitter dataset with 7.6M tweets and 25.6M retwe
   - [Images](#images)
   - [URLs](#urls)
   - [Youtube Videos](#youtube-videos)
+
+
+<img src="https://storage.googleapis.com/voter-fraud-2020/img/logo-ct-jacobs-transparent.png" alt="CT Jacobs" width="250px">
 
 # Hydrating the data
 The tweets and user objects in the dataset can be hydrated using [Twarc](https://github.com/DocNow/twarc) or [Hydrator](https://github.com/DocNow/hydrator).

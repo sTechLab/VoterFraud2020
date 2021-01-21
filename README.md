@@ -55,7 +55,7 @@ python3 hydrate.py
 *This guide was inspired by the [#Election2020 Dataset Repository](https://github.com/echen102/us-pres-elections-2020#how-to-hydrate)*.
 
 # Data description
-The columns in the data are described below. See [the paper] (https://arxiv.org/abs/2101.08210)
+The columns in the data are described below. See [the paper](https://arxiv.org/abs/2101.08210)
  for more details, or explore the [project website](http://voterfraud2020.io) for additional descriptive statistics.
 ## Tweets (7.6M)
 

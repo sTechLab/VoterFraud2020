@@ -119,7 +119,7 @@ The users are split into 5 chunks, sorted by user id (ascending).
 ## Images
 - [images.csv](data/images.csv)
 
-The image hashes were calculated using the [ImageHash python package](https://github.com/JohannesBuchner/imagehash).
+The image perceptual hash values were calculated using the [ImageHash python package](https://github.com/JohannesBuchner/imagehash).
 
 | Data Column                       | Description |
 | -------------                     | ------------- |

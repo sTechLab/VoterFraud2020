@@ -126,7 +126,7 @@ The image perceptual hash values were calculated using the [ImageHash python pac
 | Data Column                       | Description |
 | -------------                     | ------------- |
 | unique_id                         | Unique identifier of the image. |
-| tweet_id                          | Tweet ID of the tweet that contained the image.  |
+| tweet_id                          | The ID of the tweet that contained the image.  |
 | a_hash                            | The [Average hash](https://www.hackerfactor.com/blog/index.php?/archives/432-Looks-Like-It.html) of the image. |
 | p_hash                            | The [Perceptive hash](https://www.hackerfactor.com/blog/index.php?/archives/432-Looks-Like-It.html) of the image.  |
 | w_hash                            | The [Wavelet hash](https://fullstackml.com/wavelet-image-hash-in-python-3504fdd282b5) of the image.  |

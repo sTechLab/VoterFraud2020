@@ -73,7 +73,7 @@ The tweets are split into daily chunks.
 | -------------                     | ------------- |
 | tweet_id                          | The ID of the tweet.  |
 | user_community                    | The community of the tweet's author in the retweet graph, which is found using the [Infomap community detection algorithm](https://mapequation.github.io/infomap/python/) with default parameters. Values: 0, 1, 2, 3, 4, null  |
-| user_active_status                | The active status of the tweet's author (as of January 10th). Values: 'active', 'suspended', 'not-found'  |
+| user_active_status                | The active status of the tweet's author (as of January 10th). Values: 'active', 'suspended', 'deleted' (not found)  |
 | retweet_count_metadata            | The number of retweets the tweet has received according to the tweet object's metadata (as of December 16th). |
 | quote_count_metadata              | The number of quotes the tweet has received according to the tweet object's metadata (as of December 16th).  |
 | retweet_count_by_community_X      | The number of retweets the tweet received from users in community X (X=0-4). |
@@ -108,7 +108,7 @@ The users are split into 5 chunks, sorted by user id (ascending).
 | -------------                             | ------------- |
 | user_id                                   | The ID of the user. |
 | user_community                            | The community of the user in the retweet graph, which is found using the [Infomap community detection algorithm](https://mapequation.github.io/infomap/python/) with default parameters. Values: 0, 1, 2, 3, 4, null |
-| user_active_status                        | The active status of the user (as of January 10th). Values: 'active', 'suspended', 'not-found' |
+| user_active_status                        | The active status of the user (as of January 10th). Values: 'active', 'suspended', 'deleted' (not found) |
 | closeness_centrality_detractor_cluster    | Normalized closeness centrality of the top 10,000 users in the detractor cluster (computed using [Networkit](https://networkit.github.io/dev-docs/python_api/centrality.html#networkit.centrality.TopCloseness)).  |
 | closeness_centrality_promoter_cluster     | Normalized closeness centrality of the top 10,000 users in the promoter cluster (computed using [Networkit](https://networkit.github.io/dev-docs/python_api/centrality.html#networkit.centrality.TopCloseness)). |
 | retweet_count_by_community_X              | Aggregated count of the retweets the user received from other users in community X (X=0-4). |

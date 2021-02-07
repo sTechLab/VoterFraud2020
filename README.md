@@ -23,6 +23,8 @@ VoterFraud2020 is a multi-modal Twitter dataset with 7.6M tweets and 25.6M retwe
   - [Images](#images)
   - [URLs](#urls)
   - [Youtube Videos](#youtube-videos)
+- [Additional Enhancements](#additional-enhancements)
+  - [QAnon Users](#qanon-users)
 
 
 <img src="https://storage.googleapis.com/voter-fraud-2020/img/logo-ct-jacobs-transparent.png" alt="CT Jacobs" width="250px">
@@ -132,6 +134,7 @@ The image perceptual hash values were calculated using the [ImageHash python pac
 | w_hash                            | The [Wavelet hash](https://fullstackml.com/wavelet-image-hash-in-python-3504fdd282b5) of the image.  |
 
 ## URLs
+Total count: 138,411
 - [urls.csv](data/urls.csv)
 
 | Data Column                       | Description |
@@ -149,6 +152,7 @@ The image perceptual hash values were calculated using the [ImageHash python pac
 | quote_count_by_suspended_users    | Aggregated count of the quotes that tweets containing the URL received from suspended users.  |
 
 ## Youtube Videos
+Total count: 12,002
 - [youtube_videos.csv](data/youtube_videos.csv)
 
 | Data Column                       | Description |
@@ -167,3 +171,30 @@ The image perceptual hash values were calculated using the [ImageHash python pac
 | tweet_count_by_community_X        | Aggregated count of tweets that contained the video by suspended users. |
 | retweet_count_by_suspended_users  | Aggregated count of the retweets that tweets containing the video received from suspended users.  |
 | quote_count_by_suspended_users    | Aggregated count of the quotes that tweets containing the video received from suspended users.  |
+
+# Additional Enhancements
+
+
+## QAnon Users
+Total count: 50,358
+- [q_anon_users.csv](data/q_anon_users.csv)
+
+This table includes 50,358 user ids that satisfy one of the following conditions:
+1. Q-anon hashtags were found in any of their tweets (**3,602 users**)
+2. Q-anon hashtags were found in any of the tweets they retweeted (**18,151 users**)
+3. Q-anon terms were found in their description (**32,369 users**)
+
+**Note:** 3. was found by looking through the description of ~1.4M users. It is a subset of the total number of users in the dataset (~2.6M) since we were missing descriptions for users that only retweeted other tweets.
+
+**QAnon hashtags:**  *'qproofs', 'calmbeforethestorm', 'qanon', 'greatawakening', 'stqrm', 'cbts', 'wwg', 'wga', 'cabal', 'outoftheshadows', 'enjoytheshow', 'awake', 'thestorm', 'q', 'theshow' 'qproofs', 'calmbeforethestorm', 'qanon', 'greatawakening', 'stqrm', 'cbts', 'wwg', 'wga', 'cabal', 'outoftheshadows', 'enjoytheshow', 'neonrevolt', 'pizzagate', 'savethechildren', 'qmovie', 'patriqts', 'thegreatawakening', 'q', 'wwg1wga'*.
+
+The hashtags were used as terms when querying the user descriptions.
+
+| Data Column                               | Description |
+| -------------                             | ------------- |
+| user_id                                   | The ID of the user. |
+| user_community                            | The community of the user in the retweet graph, which is found using the [Infomap community detection algorithm](https://mapequation.github.io/infomap/python/) with default parameters. Values: 0, 1, 2, 3, 4, null |
+| user_active_status                        | The active status of the user (as of January 10th). Values: 'active', 'suspended', 'deleted' (not found) |
+| q_anon_tweet_ids                          | Ids of the user's tweets that contained QAnon hashtags. |
+| q_anon_tweet_retweeted_ids                | Ids of the tweets that the user retweeted, which contained QAnon hashtags.  |
+| q_anon_tweet_terms_in_description         | QAnon terms found in the user's description.  |

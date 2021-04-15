@@ -144,7 +144,7 @@ The image perceptual hash values were calculated using the [ImageHash python pac
 | tweet_count_by_community_X        | Aggregated count of tweets that contained the URL by users in community X (X=0-4). |
 | retweet_count_by_community_X      | Aggregated count of the retweets that tweets containing the URL received from users in community X (X=0-4). |
 | quote_count_by_community_X        | Aggregated count of the quotes that tweets containing the URL received from users in community X (X=0-4).  |
-| tweet_count_by_community_X        | Aggregated count of tweets that contained the URL by suspended users. |
+| tweet_count_by_suspended_users        | Aggregated count of tweets that contained the URL by suspended users. |
 | retweet_count_by_suspended_users  | Aggregated count of the retweets that tweets containing the URL received from suspended users.  |
 | quote_count_by_suspended_users    | Aggregated count of the quotes that tweets containing the URL received from suspended users.  |
 

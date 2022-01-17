@@ -5,10 +5,7 @@ VoterFraud2020 is a multi-modal Twitter dataset with 7.6M tweets and 25.6M retwe
 - [voterfraud2020.io](http://voterfraud2020.io), interactive web application for exploring the dataset
 - [Figshare dataset publication](https://doi.org/10.6084/m9.figshare.13571084) with digital object identifier (DOI) **10.6084/m9.figshare.13571084**
 - [github/sTechLab/VoterFraud2020-analysis](https://github.com/sTechLab/VoterFraud2020-analysis), the code behind the data analysis
-  
-*coming soon*
-- github/sTechLab/twitter-stream, the twitter streaming code
-<!-- - [github/sTechLab/twitter-stream](https://github.com/sTechLab/twitter-stream), the twitter streaming code -->
+- [github/sTechLab/twitter-stream](https://github.com/vegetable68/streaming-candidates-2020/tree/voting-streaming), the twitter streaming code
 
 ### Table of contents
 - [VoterFraud2020](#voterfraud2020)
